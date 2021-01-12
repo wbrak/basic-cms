@@ -47,7 +47,7 @@
 
                                     <a href="{{ url('admin/product/'.$product->id.'/edit') }}"><button class="btn btn-warning btn-edit" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fas fa-edit"></i></button></a>
 
-                                    <a type="button" class="btn btn-delete" data-toggle="modal" data-target="#staticBackdrop{{ $product->id }}"><i class="fas fa-trash-alt"></i></a>
+                                    <a type="button" class="btn btn-danger btn-delete" data-toggle="modal" data-target="#staticBackdrop{{ $product->id }}"><i class="fas fa-trash-alt"></i></a>
 
                                     <div class="modal fade" id="staticBackdrop{{ $product->id }}" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
