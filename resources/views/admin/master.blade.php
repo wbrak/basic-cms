@@ -29,6 +29,7 @@
 				$('[data-toggle="tooltip"]').tooltip()
 			});
 		</script>
+        @livewireStyles
 	</head>
 <body>
 
@@ -153,7 +154,7 @@
         $("#wrapper").toggleClass("toggled");
         });
     </script>
-
+    @livewireScripts
 </body>
 
 </html>
