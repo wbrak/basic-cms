@@ -13,7 +13,7 @@
 	<div class="container-fluid">
 		<div class="panel shadow">
 			<div class="header">
-				<h2 class="title"><i class="far fa-list-alt"></i> @lang('Pages')</h2>
+				<h2 class="title"><img src="{{asset('storage/svg/023-data.svg')}}"> @lang('Pages')</h2>
 				<a class="btn btn-danger btn-back" href="{!! route('PageAdd') !!}"><i class="fas fa-plus"></i> @lang('Add Page')</a>
 			</div>
 

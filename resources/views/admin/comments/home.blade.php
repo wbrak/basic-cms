@@ -13,7 +13,7 @@
 	<div class="container-fluid">
 		<div class="panel shadow">
 			<div class="header">
-				<h2 class="title"><i class="far fa-comments"></i> @lang('Comments')</h2>
+				<h2 class="title"><img src="{{asset('storage/svg/050-comments.svg')}}"> @lang('Comments')</h2>
 			</div>
 
 			<div class="inside table-responsive">

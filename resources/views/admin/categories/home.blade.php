@@ -15,7 +15,7 @@
 			<div class="col-md-4">
 				<div class="panel shadow">
 					<div class="header">
-						<h2 class="title"><i class="far fa-plus-square"></i> @lang('Add Category')</h2>
+						<h2 class="title"><img src="{{asset('storage/svg/038-tshirt.svg')}}"> @lang('Add Category')</h2>
 					</div>
 
 					<div class="inside">
@@ -58,7 +58,7 @@
 			<div class="col-md-8">
 				<div class="panel shadow">
 					<div class="header">
-						<h2 class="title"><i class="far fa-folder-open"></i> @lang('Categories')</h2>
+						<h2 class="title"><img src="{{asset('storage/svg/038-tshirt.svg')}}"> @lang('Categories')</h2>
 					</div>
 
 					<div class="inside">

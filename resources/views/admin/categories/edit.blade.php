@@ -13,10 +13,10 @@
 @section('content')
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-8">
 				<div class="panel shadow">
 					<div class="header">
-						<h2 class="title"><i class="far fa-edit"></i> @lang('Edit Category')</h2>
+						<h2 class="title"><img src="{{asset('storage/svg/038-tshirt.svg')}}"> @lang('Edit Category')</h2>
 						<a class="btn btn-danger btn-back mtop16" href="{!! url('/admin/categories/0') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Categories')</a>
 					</div>
 
@@ -60,7 +60,7 @@
 			<div class="col-md-4">
 				<div class="panel shadow">
 					<div class="header">
-						<h2 class="title"><i class="far fa-image"></i> @lang('Icon')</h2>
+						<h2 class="title"><img src="{{asset('storage/svg/038-tshirt.svg')}}"> @lang('Icon')</h2>
 					</div>
 
 					<div class="inside">

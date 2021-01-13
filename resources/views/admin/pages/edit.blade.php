@@ -16,7 +16,7 @@
 		<div class="col-md-9">
 			<div class="panel shadow">
 				<div class="header">
-					<h2 class="title"><i class="far fa-edit"></i> @lang('Edit Page')</h2>
+					<h2 class="title"><img src="{{asset('storage/svg/023-data.svg')}}"> @lang('Edit Page')</h2>
 					<a class="btn btn-danger btn-back" href="{!! route('Pages') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Pages')</i></a>
 				</div>
 

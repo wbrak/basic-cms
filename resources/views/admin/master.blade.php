@@ -137,8 +137,8 @@
 				  ?> por<a xmlns:cc="http://creativecommons.org/ns#" href="https://alojatuweb.com" property="cc:attributionName" rel="cc:attributionURL">
 				  	AlojaTuWeb</a>. @lang('License')
 		        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 <img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+                <div>Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
 		    </div>
-            <div>Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
 
 	    </div>
 	    <!-- /#page-content-wrapper -->

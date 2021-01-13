@@ -6,7 +6,7 @@
 <li class="breadcrumb-item">
 	<a href="{!! url('/admin') !!}"><i class="fas fa-home"></i> @lang('Dashboard') /</a>
 	<a href="{!! route('Posts') !!}"><i class="fas fa-newspaper"></i> @lang('Posts') /</a>
-	<a href="{!! url('admin/post/'.$post->id.'/detail') !!}"><i class="fas fa-info-circle"></i> @lang('Details')</a>
+	<a href="{!! url('admin/post/'.$post->id.'/detail') !!}"><i class="fas fa-eye"></i> @lang('Details')</a>
 </li>
 @endsection
 
@@ -16,7 +16,7 @@
 		<div class="col-md-9">
 			<div class="panel shadow">
 				<div class="header">
-					<h2 class="title"><i class="far fa-eye"></i> @lang('Details Posts')</h2>
+					<h2 class="title"><img src="{{asset('storage/svg/001-sla.svg')}}"> @lang('Details Post')</h2>
 					<a class="btn btn-danger btn-back" href="{!! route('Posts') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Posts')</a>
 				</div>
 

@@ -14,7 +14,7 @@
 	<div class="container-fluid">
 		<div class="panel shadow">
 			<div class="header">
-				<h2 class="title"><i class="far fa-plus-square"></i> @lang('Add Post')</h2>
+				<h2 class="title"><img src="{{asset('storage/svg/001-sla.svg')}}"> @lang('Add Post')</h2>
 				<a class="btn btn-back btn-danger mtop16" href="{!! route('Posts') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Posts')</a>
 			</div>
 

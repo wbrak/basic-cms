@@ -4,10 +4,9 @@
 
 @section('breadcrumb')
     <li class="breadcrumb-item">
-        <a href="{{ route('Products') }}"><i class="fas fa-shopping-cart"></i> Productos</a>
-    </li>
-    <li class="breadcrumb-item">
-        <a href="{{ url('admin/product/'.$product->id.'/edit') }}"><i class="far fa-edit"></i> Editar</a>
+        <a href="{!! url('/admin') !!}"><i class="fas fa-home"></i> @lang('Dashboard') /</a>
+        <a href="{{ route('Products') }}"><i class="fas fa-boxes"></i> Productos /</a>
+        <a href="{{ url('admin/product/'.$product->id.'/edit') }}"><i class="fas fa-edit"></i> Editar</a>
     </li>
 @endsection
 
@@ -17,7 +16,7 @@
             <div class="col-md-9">
                 <div class="panel shadow">
                     <div class="header">
-                        <h2 class="title"><i class="far fa-edit"></i> Editar Producto</h2>
+                        <h2 class="title"><img src="{{asset('storage/svg/048-shopping bag.svg')}}"> Editar Producto</h2>
                         <a class="btn btn-back btn-danger mtop16" href="{{ route('Products') }}"><i class="fas fa-undo-alt"></i> Volver Productos</i></a>
                     </div>
 

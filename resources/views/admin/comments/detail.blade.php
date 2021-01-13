@@ -14,8 +14,8 @@
 <div class="container-fluid">
 	<div class="panel shadow">
 		<div class="header">
-			<h2 class="title"><i class="far fa-eye"></i> @lang('Details Comment')</h2>
-			<a class="btn btn-danger btn-back" href="{!! route('Comments') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Comments')</i></a>
+			<h2 class="title"><img src="{{asset('storage/svg/050-comments.svg')}}"> @lang('Details Comment')</h2>
+			<a class="btn btn-danger btn-back" href="{!! route('Comments') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Comments')</a>
 		</div>
 
 			<div class="inside">

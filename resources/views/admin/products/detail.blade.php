@@ -6,7 +6,7 @@
     <li class="breadcrumb-item">
         <a href="{!! url('/admin') !!}"><i class="fas fa-home"></i> @lang('Dashboard') /</a>
         <a href="{{ route('Products') }}"><i class="fas fa-boxes"></i> @lang('Products') /</a>
-        <a href="{{ url('admin/product/'.$product->id.'detail') }}"><i class="far fa-edit"></i> @lang('Details')</a>
+        <a href="{{ url('admin/product/'.$product->id.'detail') }}"><i class="fas fa-edit"></i> @lang('Details')</a>
     </li>
 @endsection
 
@@ -16,8 +16,8 @@
             <div class="col-md-9">
                 <div class="panel shadow">
                     <div class="header">
-                        <h2 class="title"><i class="far fa-edit"></i> Detalle Producto {{ $product->name }}</h2>
-                        <a class="btn btn-danger mtop16" href="{{ route('Products') }}"><i class="fas fa-undo-alt"></i> Ver Productos</i></a>
+                        <h2 class="title"><img src="{{asset('storage/svg/048-shopping bag.svg')}}"> Detalle Producto</h2>
+                        <a class="btn btn-back btn-danger mtop16" href="{{ route('Products') }}"><i class="fas fa-undo-alt"></i> Volver a Productos</i></a>
                     </div>
 
                     <div class="inside">

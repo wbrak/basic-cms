@@ -5,7 +5,7 @@
 @section('breadcrumb')
     <li class="breadcrumb-item">
         <a href="{!! url('/admin') !!}"><i class="fas fa-home"></i> @lang('Dashboard') /</a>
-        <a href="{{ route('Products') }}"><i class="fas fa-shopping-cart"></i> @lang('Products') /</a>
+        <a href="{{ route('Products') }}"><i class="fas fa-boxes"></i> @lang('Products') /</a>
         <a href="{{ route('ProductAdd') }}"><i class="fas fa-plus"></i> @lang('Add Product')</a>
     </li>
 @endsection
@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="panel shadow">
             <div class="header">
-                <h2 class="title"><i class="fas fa-plus"></i> @lang('Add Product')</h2>
+                <h2 class="title"><img src="{{asset('storage/svg/048-shopping bag.svg')}}"> @lang('Add Product')</h2>
                 <a class="btn btn-danger btn-back" href="{{ route('Products') }}"><i class="fas fa-undo-alt"></i> @lang('Back to Products')</a>
             </div>
 

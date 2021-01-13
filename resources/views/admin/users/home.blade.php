@@ -13,7 +13,7 @@
 	<div class="container-fluid">
 		<div class="panel shadow">
 			<div class="header">
-				<h2 class="title"><i class="fas fa-users"></i> @lang('Users')</h2>
+				<h2 class="title"><img src="{{asset('storage/svg/004-client.svg')}}"> @lang('Users')</h2>
 			</div>
 
 			<div class="inside table-responsive">

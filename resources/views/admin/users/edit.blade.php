@@ -6,7 +6,7 @@
 <li class="breadcrumb-item">
     <a href="{!! url('/admin') !!}"><i class="fas fa-home"></i> @lang('Dashboard') /</a>
 	<a href="{!! url('/admin/users/all') !!}"><i class="fas fa-users"></i> @lang('Users') /</a>
-    <a href="{!! route('UserEdit', $user->id) !!}"><i class="fa fa-edit"></i> @lang('Edit')</a>
+    <a href="{!! route('UserEdit', $user->id) !!}"><i class="fas fa-edit"></i> @lang('Edit')</a>
 </li>
 @endsection
 
@@ -17,7 +17,7 @@
             <div class="col-md-3">
                 <div class="panel shadow">
                     <div class="header">
-                        <h2 class="title"><i class="fas fa-user"></i> @lang('User Profile')</h2>
+                        <h2 class="title"><img src="{{asset('storage/svg/004-client.svg')}}"> @lang('User Profile')</h2>
                     </div>
 
                     <div class="inside">
