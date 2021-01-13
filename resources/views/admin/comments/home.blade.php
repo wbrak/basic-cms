@@ -13,7 +13,7 @@
 	<div class="container-fluid">
 		<div class="panel shadow">
 			<div class="header">
-				<h2 class="title"><i class="fas fa-newspaper"></i> @lang('Comments')</h2>
+				<h2 class="title"><i class="far fa-comments"></i> @lang('Comments')</h2>
 			</div>
 
 			<div class="inside table-responsive">

@@ -5,7 +5,7 @@
 @section('breadcrumb')
 <li class="breadcrumb-item">
 	<a href="{!! url('/admin') !!}"><i class="fas fa-home"></i> @lang('Dashboard') /</a>
-	<a href="{!! route('Pages') !!}"><i class="fas fa-pager"></i> @lang('Pages') /</a>
+	<a href="{!! route('Pages') !!}"><i class="fas fa-list-alt"></i> @lang('Pages') /</a>
 	<a href="{!! url('admin/page/'.$page->id.'/edit') !!}"><i class="fas fa-edit"></i> @lang('Edit')</a>
 </li>
 @endsection
@@ -16,7 +16,7 @@
 		<div class="col-md-9">
 			<div class="panel shadow">
 				<div class="header">
-					<h2 class="title"><i class="fas fa-edit"></i> @lang('Edit Page')</h2>
+					<h2 class="title"><i class="far fa-edit"></i> @lang('Edit Page')</h2>
 					<a class="btn btn-danger btn-back" href="{!! route('Pages') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Pages')</i></a>
 				</div>
 
@@ -25,7 +25,7 @@
 					<div class="form-row">
 
 					    <div class="col-md-8">
-					        <label for="title">@lang('Title')</label>	
+					        <label for="title">@lang('Title')</label>
 					        <div class="input-group">
 					      	    <div class="input-group-prepend">
 	                           		<span class="input-group-text" id="basic-addon1">
@@ -129,7 +129,7 @@
 						</div>
 
 						<div class="col-md-12 mtop16">
-					        <label for="content">@lang('Content')</label>	
+					        <label for="content">@lang('Content')</label>
 						  	{!! Form::textarea('content', $page->content, ['class' => 'form-control ckeditor required']) !!}
 						</div>
 					</div>
@@ -145,15 +145,6 @@
 						<h2 class="title"><i class="far fa-image"></i> @lang('Outstanding Image')</h2>
 						<div class="inside">
 							<img src="{!! asset('storage/pages/'.$page->file_path.'/'.$page->image) !!}" class="img-fluid" alt="@lang('Page Image')">
-						</div>					
-					</div>
-				</div>
-
-				<div class="panel shadow mtop16 lateral">
-					<div class="header">
-						<h2 class="title">Proximas zonas <i class="fas fa-question"></i></h2>
-						<div class="inside">
-							<p>Prueba</p>
 						</div>
 					</div>
 				</div>
@@ -165,9 +156,18 @@
 							<p>Prueba</p>
 						</div>
 					</div>
-				</div>	
+				</div>
+
+				<div class="panel shadow mtop16 lateral">
+					<div class="header">
+						<h2 class="title">Proximas zonas <i class="fas fa-question"></i></h2>
+						<div class="inside">
+							<p>Prueba</p>
+						</div>
+					</div>
+				</div>
 			</div>
-	
+
 	</div>
 </div>
 

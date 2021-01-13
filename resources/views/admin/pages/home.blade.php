@@ -5,7 +5,7 @@
 @section('breadcrumb')
 	<li class="breadcrumb-item">
 		<a href="{!! url('/admin') !!}"><i class="fas fa-home"></i> @lang('Dashboard') /</a>
-		<a href="{!! route('Pages') !!}"><i class="fas fa-pager"></i> @lang('Pages')</a>
+		<a href="{!! route('Pages') !!}"><i class="fas fa-list-alt"></i> @lang('Pages')</a>
 	</li>
 @endsection
 
@@ -13,7 +13,7 @@
 	<div class="container-fluid">
 		<div class="panel shadow">
 			<div class="header">
-				<h2 class="title"><i class="fas fa-newspaper"></i> @lang('Pages')</h2>
+				<h2 class="title"><i class="far fa-list-alt"></i> @lang('Pages')</h2>
 				<a class="btn btn-danger btn-back" href="{!! route('PageAdd') !!}"><i class="fas fa-plus"></i> @lang('Add Page')</a>
 			</div>
 

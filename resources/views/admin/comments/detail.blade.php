@@ -6,7 +6,7 @@
 <li class="breadcrumb-item">
 	<a href="{!! url('/admin') !!}"><i class="fas fa-home"></i> @lang('Dashboard') /</a>
 	<a href="{!! route('Comments') !!}"><i class="fas fa-comments"></i> @lang('Comments') /</a>
-	<a href="{!! url('admin/comment/'.$comment->id.'/detail') !!}"><i class="fas fa-info-circle"></i> @lang('Details')</a>
+	<a href="{!! url('admin/comment/'.$comment->id.'/detail') !!}"><i class="fas fa-eye"></i> @lang('Details')</a>
 </li>
 @endsection
 
@@ -14,7 +14,7 @@
 <div class="container-fluid">
 	<div class="panel shadow">
 		<div class="header">
-			<h2 class="title"><i class="fas fa-info-circle"></i> @lang('Details Comment')</h2>
+			<h2 class="title"><i class="far fa-eye"></i> @lang('Details Comment')</h2>
 			<a class="btn btn-danger btn-back" href="{!! route('Comments') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Comments')</i></a>
 		</div>
 

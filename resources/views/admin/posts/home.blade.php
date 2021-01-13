@@ -13,7 +13,7 @@
 	<div class="container-fluid">
 		<div class="panel shadow">
 			<div class="header">
-				<h2 class="title"><i class="fas fa-newspaper"></i> @lang('Posts')</h2>
+				<h2 class="title"><i class="far fa-newspaper"></i> @lang('Posts')</h2>
 				@if(kvfj(Auth::user()->permissions, 'PostAdd'))
 				<a class="btn btn-danger btn-back" href="{!! route('PostAdd') !!}"><i class="fas fa-plus"></i> @lang('Add Post')</a>
 				@endif

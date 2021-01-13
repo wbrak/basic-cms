@@ -14,7 +14,7 @@
 	<div class="container-fluid">
 		<div class="panel shadow">
 			<div class="header">
-				<h2 class="title"><i class="fas fa-plus"></i> @lang('Add Post')</h2>
+				<h2 class="title"><i class="far fa-plus-square"></i> @lang('Add Post')</h2>
 				<a class="btn btn-back btn-danger mtop16" href="{!! route('Posts') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Posts')</a>
 			</div>
 
@@ -23,7 +23,7 @@
 				<div class="form-row">
 
 				    <div class="col-md-8">
-				        <label for="title">@lang('Title')</label>	
+				        <label for="title">@lang('Title')</label>
 				        <div class="input-group">
 				      	    <div class="input-group-prepend">
 	                       		<span class="input-group-text" id="basic-addon1">
@@ -127,7 +127,7 @@
 					</div>
 
 					<div class="col-md-12 mtop16">
-				        <label for="content">@lang('Content')</label>	
+				        <label for="content">@lang('Content')</label>
 					  	{!! Form::textarea('content', null, ['class' => 'form-control ckeditor required']) !!}
 					</div>
 
@@ -135,7 +135,7 @@
 				{!! Form::submit(Lang::get('Add Post'), array('class' => 'btn btn-success mtop16')) !!}
 				{!! Form::close() !!}
 			</div>
-			
+
 		</div>
 	</div>
 @endsection

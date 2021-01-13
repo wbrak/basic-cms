@@ -5,8 +5,8 @@
 @section('breadcrumb')
 <li class="breadcrumb-item">
 	<a href="{!! url('/admin') !!}"><i class="fas fa-home"></i> @lang('Dashboard') /</a>
-	<a href="{!! route('Pages') !!}"><i class="fas fa-pager"></i> @lang('Pages') /</a>
-	<a href="{!! url('admin/page/'.$page->id.'/detail') !!}"><i class="fas fa-info-circle"></i> @lang('Details')</a>
+	<a href="{!! route('Pages') !!}"><i class="fas fa-list-alt"></i> @lang('Pages') /</a>
+	<a href="{!! url('admin/page/'.$page->id.'/detail') !!}"><i class="fas fa-eye"></i> @lang('Details')</a>
 </li>
 @endsection
 
@@ -16,7 +16,7 @@
 		<div class="col-md-9">
 			<div class="panel shadow">
 				<div class="header">
-					<h2 class="title"><i class="fas fa-info-circle"></i> @lang('Details Pages')</h2>
+					<h2 class="title"><i class="far fa-eye"></i> @lang('Details Pages')</h2>
 					<a class="btn btn-danger btn-back" href="{!! route('Pages') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Pages')</i></a>
 				</div>
 
@@ -24,7 +24,7 @@
 				<div class="form-row">
 
 					<div class="col-md-8">
-				        <label for="title">@lang('Title')</label>	
+				        <label for="title">@lang('Title')</label>
 				        <div class="input-group">
 				      	    <div class="input-group-prepend">
                            		<span class="input-group-text" id="basic-addon1">
@@ -91,7 +91,7 @@
 
 					<div class="col-md-2 mtop16">
 						<fieldset disabled="">
-				        <label for="category">@lang('Category')</label>	
+				        <label for="category">@lang('Category')</label>
 				        <div class="input-group">
 				      	    <div class="input-group-prepend">
                            		<span class="input-group-text" id="basic-addon1">
@@ -116,7 +116,7 @@
 					</div>
 
 					<div class="col-md-3 mtop16">
-				        <label for="user">@lang('Created by')</label>	
+				        <label for="user">@lang('Created by')</label>
 				        <div class="input-group">
 				      	    <div class="input-group-prepend">
                            		<span class="input-group-text" id="basic-addon1">
@@ -152,7 +152,7 @@
 					</div>
 
 					<div class="col-md-9 mtop16">
-				        <label for="slug">@lang('Friendly Url')</label>	
+				        <label for="slug">@lang('Friendly Url')</label>
 				        <div class="input-group">
 				      	    <div class="input-group-prepend">
                            		<span class="input-group-text" id="basic-addon1">
@@ -191,7 +191,7 @@
 			</div>
 		</div>
 	</div>
-				
+
 
 		<div class="col-md-3">
 			<div class="panel shadow">
@@ -207,7 +207,7 @@
 				<div class="header">
 					<h2 class="title">Proximas zonas <i class="fas fa-question"></i></h2>
 					<div class="inside">
-						
+
 					</div>
 				</div>
 			</div>
@@ -221,7 +221,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 

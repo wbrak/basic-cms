@@ -14,7 +14,7 @@
 <div class="container-fluid">
 	<div class="panel shadow">
 		<div class="header">
-			<h2 class="title"><i class="fa fa-edit"></i> @lang('Edit Comment')</h2>
+			<h2 class="title"><i class="far fa-edit"></i> @lang('Edit Comment')</h2>
 			<a class="btn btn-back btn-danger mtop16" href="{!! route('Comments') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Comments')</a>
 		</div>
 

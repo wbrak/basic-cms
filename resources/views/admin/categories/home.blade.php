@@ -5,7 +5,7 @@
 @section('breadcrumb')
 	<li class="breadcrumb-item">
 		<a href="{!! url('/admin') !!}"><i class="fas fa-home"></i> @lang('Dashboard') /</a>
-		<a href="{!! url('/admin/categories/0') !!}"><i class="far fa-folder-open"></i> @lang('Categories')</a>
+		<a href="{!! url('/admin/categories/0') !!}"><i class="fas fa-folder-open"></i> @lang('Categories')</a>
 	</li>
 @endsection
 
@@ -15,7 +15,7 @@
 			<div class="col-md-4">
 				<div class="panel shadow">
 					<div class="header">
-						<h2 class="title"><i class="fas fa-plus"></i> @lang('Add Category')</h2>
+						<h2 class="title"><i class="far fa-plus-square"></i> @lang('Add Category')</h2>
 					</div>
 
 					<div class="inside">

@@ -5,7 +5,7 @@
 @section('breadcrumb')
 <li class="breadcrumb-item">
 	<a href="{!! url('/admin') !!}"><i class="fas fa-home"></i> @lang('Dashboard') /</a>
-	<a href="{!! route('Pages') !!}"><i class="fas fa-pager"></i> @lang('Pages') /</a>
+	<a href="{!! route('Pages') !!}"><i class="fas fa-list-alt"></i> @lang('Pages') /</a>
 	<a href="{!! route('PageAdd') !!}"><i class="fas fa-plus"></i> @lang('Add')</a>
 </li>
 @endsection
@@ -14,7 +14,7 @@
 <div class="container-fluid">
 	<div class="panel shadow">
 		<div class="header">
-			<h2 class="title"><i class="fas fa-plus"></i> @lang('Add Page')</h2>
+			<h2 class="title"><i class="far fa-plus-square"></i> @lang('Add Page')</h2>
 			<a class="btn btn-danger btn-back" href="{!! route('Pages') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Pages')</i></a>
 		</div>
 
@@ -24,7 +24,7 @@
 				<div class="form-row">
 
 				    <div class="col-md-8">
-				        <label for="title">@lang('Title')</label>	
+				        <label for="title">@lang('Title')</label>
 				        <div class="input-group">
 				      	    <div class="input-group-prepend">
                            		<span class="input-group-text" id="basic-addon1">
@@ -128,13 +128,13 @@
 					</div>
 
 					<div class="col-md-12 mtop16">
-				        <label for="content">@lang('Content')</label>	
+				        <label for="content">@lang('Content')</label>
 					  	{!! Form::textarea('content', null, ['class' => 'form-control ckeditor required']) !!}
 					</div>
 				{!! Form::submit(Lang::get('Add Page'), ['class' => 'btn btn-success mtop16']) !!}
 				{!! Form::close() !!}
 		</div>
-		
+
 	</div>
 </div>
 

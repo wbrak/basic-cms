@@ -5,7 +5,7 @@
 @section('breadcrumb')
 	<li class="breadcrumb-item">
 		<a href="{!! url('/admin') !!}"><i class="fas fa-home"></i> @lang('Dashboard') /</a>
-		<a href="{!! url('/admin/categories/0') !!}"><i class="far fa-folder-open"></i> @lang('Categories') /</a>
+		<a href="{!! url('/admin/categories/0') !!}"><i class="fas fa-folder-open"></i> @lang('Categories') /</a>
 		<a href="{!! route('CategoryEdit',$category->id) !!}"><i class="fas fa-edit"></i> @lang('Edit')</a>
 	</li>
 @endsection
@@ -16,7 +16,7 @@
 			<div class="col-md-4">
 				<div class="panel shadow">
 					<div class="header">
-						<h2 class="title"><i class="fas fa-edit"></i> @lang('Edit Category')</h2>
+						<h2 class="title"><i class="far fa-edit"></i> @lang('Edit Category')</h2>
 						<a class="btn btn-danger btn-back mtop16" href="{!! url('/admin/categories/0') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Categories')</a>
 					</div>
 
@@ -56,11 +56,11 @@
 				</div>
 			</div>
 
-			@if(!is_null($cat->icono))
+			@if(!is_null($category->icono))
 			<div class="col-md-4">
 				<div class="panel shadow">
 					<div class="header">
-						<h2 class="title"><i class="fas fa-edit"></i> @lang('Icon')</h2>
+						<h2 class="title"><i class="far fa-image"></i> @lang('Icon')</h2>
 					</div>
 
 					<div class="inside">

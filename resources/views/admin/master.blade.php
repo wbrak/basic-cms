@@ -41,28 +41,28 @@
 	        <div class="list-group list-group-flush">
 	        	<img src="{!! asset('storage/logo.png') !!}" class="img-fluid">
 	        	@if(kvfj(Auth::user()->permissions, 'Dashboard'))
-		        <a href="{!! url('/admin') !!}" class="lk-Dashboard list-group-item list-group-item-action bg-light"><i class="fas fa-home"></i> @lang('Dashboard')</a>
+		        <a href="{!! url('/admin') !!}" class="lk-Dashboard list-group-item list-group-item-action bg-light"><img src="{{asset('storage/svg/033-improvement.svg')}}"> @lang('Dashboard')</a>
 		        @endif
 		        @if(kvfj(Auth::user()->permissions, 'Categories'))
-		        <a href="{!! url('/admin/categories/0') !!}" class="lk-Categories lk-CategoryEdit list-group-item list-group-item-action bg-light"><i class="fas fa-folder-open"></i> @lang('Categories')</a>
+		        <a href="{!! url('/admin/categories/0') !!}" class="lk-Categories lk-CategoryEdit list-group-item list-group-item-action bg-light"><img src="{{asset('storage/svg/038-tshirt.svg')}}"> @lang('Categories')</a>
 		        @endif
 		        @if(kvfj(Auth::user()->permissions, 'Posts'))
-		        <a href="{!! url('/admin/posts') !!}" class="lk-Posts lk-PostEdit lk-PostAdd lk-PostDetail list-group-item list-group-item-action bg-light"><i class="fas fa-newspaper"></i> @lang('Posts')</a>
+		        <a href="{!! url('/admin/posts') !!}" class="lk-Posts lk-PostEdit lk-PostAdd lk-PostDetail list-group-item list-group-item-action bg-light"><img src="{{asset('storage/svg/001-sla.svg')}}"> @lang('Posts')</a>
 		        @endif
 		        @if(kvfj(Auth::user()->permissions, 'Pages'))
-		        <a href="{!! url('/admin/pages') !!}" class="lk-Pages lk-PageEdit lk-PageAdd lk-PageDetail list-group-item list-group-item-action bg-light"><i class="fas fa-pager"></i> @lang('Pages')</a>
+		        <a href="{!! url('/admin/pages') !!}" class="lk-Pages lk-PageEdit lk-PageAdd lk-PageDetail list-group-item list-group-item-action bg-light"><img src="{{asset('storage/svg/023-data.svg')}}"> @lang('Pages')</a>
 		        @endif
 		        @if(kvfj(Auth::user()->permissions, 'Comments'))
-		        <a href="{!! url('admin/comments') !!}" class="lk-Comments lk-CommentEdit lk-CommentAdd lk-CommentDetail list-group-item list-group-item-action bg-light"><i class="fas fa-comments"></i> @lang('Comments')</a>
+		        <a href="{!! url('admin/comments') !!}" class="lk-Comments lk-CommentEdit lk-CommentAdd lk-CommentDetail list-group-item list-group-item-action bg-light"><img src="{{asset('storage/svg/050-comments.svg')}}"> @lang('Comments')</a>
 		        @endif
                 @if(kvfj(Auth::user()->permissions, 'Products'))
-                <a href="{!! url('/admin/products') !!}" class="lk-Products lk-ProductEdit lk-ProductAdd lk-ProductDetail list-group-item list-group-item-action bg-light"><i class="fas fa-shopping-cart"></i> @lang('Products')</a>
+                <a href="{!! url('/admin/products') !!}" class="lk-Products lk-ProductEdit lk-ProductAdd lk-ProductDetail list-group-item list-group-item-action bg-light"><img src="{{asset('storage/svg/048-shopping bag.svg')}}"> @lang('Products')</a>
                 @endif
 		        @if(kvfj(Auth::user()->permissions, 'Users'))
-		        <a href="{!! url('/admin/users/all') !!}" class="lk-Users lk-UserEdit lk-UserPermissions lk-UserProfile list-group-item list-group-item-action bg-light"><i class="fas fa-users"></i> @lang('Users')</a>
+		        <a href="{!! url('/admin/users/all') !!}" class="lk-Users lk-UserEdit lk-UserPermissions lk-UserProfile list-group-item list-group-item-action bg-light"><img src="{{asset('storage/svg/004-client.svg')}}"> @lang('Users')</a>
 		        @endif
 		        @if(kvfj(Auth::user()->permissions, 'Settings'))
-		        <a href="{!! url('/admin/settings') !!}" class="lk-Settings list-group-item list-group-item-action bg-light"><i class="fas fa-cogs"></i> @lang('Settings')</a>
+		        <a href="{!! url('/admin/settings') !!}" class="lk-Settings list-group-item list-group-item-action bg-light"><img src="{{asset('storage/svg/035-optimization.svg')}}"> @lang('Settings')</a>
 		        @endif
 		        <div class="info2 mtop16">
 					{!! Auth::user()->name !!} O variables con datos empresa??
@@ -138,6 +138,7 @@
 				  	AlojaTuWeb</a>. @lang('License')
 		        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 <img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
 		    </div>
+            <div>Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
 
 	    </div>
 	    <!-- /#page-content-wrapper -->

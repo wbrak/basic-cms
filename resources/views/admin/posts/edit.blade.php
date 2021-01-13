@@ -16,7 +16,7 @@
 		<div class="col-md-9">
 			<div class="panel shadow">
 				<div class="header">
-					<h2 class="title"><i class="fa fa-edit"></i> @lang('Edit Post')</h2>
+					<h2 class="title"><i class="far fa-edit"></i> @lang('Edit Post')</h2>
 					<a class="btn btn-back btn-danger mtop16" href="{!! route('Posts') !!}"><i class="fas fa-undo-alt"></i> @lang('Back to Posts')</a>
 				</div>
 
@@ -129,7 +129,7 @@
 						</div>
 
 						<div class="col-md-12 mtop16">
-				        <label for="content">@lang('Content')</label>	
+				        <label for="content">@lang('Content')</label>
 						  	{!! Form::textarea('content', $post->content, ['class' => 'form-control required ckeditor']) !!}
 						</div>
 
