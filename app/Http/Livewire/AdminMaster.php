@@ -10,4 +10,14 @@ class AdminMaster extends Component
     {
         return view('livewire.admin-master');
     }
+
+    public function admin()
+    {
+        return view('livewire.admin-master');
+    }
+
+    public function categories()
+    {
+        return redirect()->to('/admin/categories/0');
+    }
 }
