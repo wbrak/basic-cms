@@ -28,7 +28,8 @@ class ConnectController extends Controller
     /**
      * ConnectController constructor.
      */
-	public function __construct(){
+    public function __construct()
+    {
 		$this->middleware('guest')->except(['getLogout']);
 	}
 
