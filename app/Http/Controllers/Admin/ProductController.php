@@ -61,8 +61,8 @@ class ProductController extends Controller
     public function getProductEdit($id)
     {
         $product = Product::findOrfail($id);
-        $categoriess = Category::where('module', '3')->pluck('name', 'id');
-        $data = ['categories' => $categoriess, 'product' => $product];
+        $categories = Category::where('module', '3')->pluck('name', 'id');
+        $data = ['categories' => $categories, 'product' => $product];
         return view('admin.products.edit', $data);
     }
 
@@ -169,7 +169,7 @@ class ProductController extends Controller
                     $img->save($upload_path.'/'.$path.'/t_'.$filename);
                 endif;
                 Alert::success('Producto Creado', 'El producto se ha creado correctamente.');
-                return redirect('/admin/productos');
+                return redirect('/admin/products');
             endif;
         endif;
     }

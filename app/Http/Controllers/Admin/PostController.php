@@ -124,7 +124,7 @@ class PostController extends Controller
                     unlink($upload_path.'/'.$ipp.'/t_'.$ip);
                 endif;
                 Alert::success(Lang::get('Post Updated'), Lang::get('The post has updated successfully'));
-                Log::info(Lang::get('Updated post by Admin:'), ['admin' => Auth::id()]);
+                Log::info(Lang::get('Updated post by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
                 return back();
             endif;
         endif;
@@ -192,7 +192,7 @@ class PostController extends Controller
                     $img->save($upload_path.'/'.$path.'/t_'.$filename);
                 endif;
                 Alert::success(Lang::get('Post Created'), Lang::get('The post has created successfully'));
-                Log::info(Lang::get('Created post by Admin:'), ['admin' => Auth::id()]);
+                Log::info(Lang::get('Created post by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
                 return redirect('admin/posts');
             endif;
         endif;
@@ -207,7 +207,7 @@ class PostController extends Controller
         $post = Post::findOrfail($id);
         if($post->delete()):
             Alert::success(Lang::get('Post Delete'), Lang::get('The selected post has been successfully removed'));
-            Log::info(Lang::get('Delete post by Admin:'), ['admin' => Auth::id()]);
+            Log::info(Lang::get('Delete post by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
             return back();
         endif;
     }

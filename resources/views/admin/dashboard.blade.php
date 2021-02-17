@@ -18,7 +18,7 @@
 	</div>
 	@endif
 
-	
+
 
 	<div class="row">
 		<div class="col-md-6">
@@ -263,8 +263,66 @@
 			</script>
 		</div>
 
+        <div class="col-md-6">
+            <canvas id="products" height="100"></canvas>
+            <script>
+                var ctx = document.getElementById('products').getContext('2d');
+                var products = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['@lang('Products')'],
+                        datasets: [{
+                            label: ['@lang('Products')'],
+                            data: <?php echo json_encode($products); ?>,
+                            backgroundColor: [
+                                'rgba(19, 134, 4, 0.1)',
+                            ],
+                            borderColor: [
+                                'rgba(19, 134, 4, 0.96)',
+                            ],
+                            borderWidth: 2
+                        }, {
+                            label: ['@lang('Products Published')'],
+                            data: <?php echo json_encode($productsPublished); ?>,
+                            backgroundColor: [
+                                'rgba(4, 112, 134, 0.1)',
+                            ],
+                            borderColor: [
+                                'rgba(4, 112, 134, 0.96)',
+                            ],
+                            borderWidth: 2
+                        }, {
+                            label: ['@lang('In Draft')'],
+                            data: <?php echo json_encode($productsDraft); ?>,
+                            backgroundColor: [
+                                'rgba(198, 131, 6, 0.1)',
+                            ],
+                            borderColor: [
+                                'rgba(198, 131, 6, 0.98)',
+                            ],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        title: {
+                            display: true,
+                            fontSize: 20,
+                            text: '@lang('Products')'
+                        },
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+        </div>
+
 	</div>
-	
+
 </div>
 
 @endsection

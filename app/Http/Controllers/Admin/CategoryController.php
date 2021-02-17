@@ -89,7 +89,7 @@ class CategoryController extends Controller
             endif;
             if($category->save()):
                 Alert::success(Lang::get('Category Updated'), Lang::get('The category has been updated successfully'));
-                Log::info(Lang::get('Updated category by Admin:'), ['admin' => Auth::id()]);
+                Log::info(Lang::get('Updated category by Admin:'), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
                 return back();
             endif;
         endif;
@@ -126,7 +126,7 @@ class CategoryController extends Controller
                     $fl = $request->icon->storeAs($path, $filename, 'categories');
                 endif;
                 Alert::success(Lang::get('Category Created'), Lang::get('The category has been created successfully'));
-                Log::info(Lang::get('Created category by Admin:'), ['admin' => Auth::id()]);
+                Log::info(Lang::get('Created category by Admin:'), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
                 return back();
             endif;
         endif;
@@ -141,7 +141,7 @@ class CategoryController extends Controller
         $category = Category::findOrfail($id);
         if($category->delete()):
             Alert::success(Lang::get('Category Deleted'), Lang::get('The category has been deleted successfully'));
-            Log::info(Lang::get('Delete category by Admin:'), ['admin' => Auth::id()]);
+            Log::info(Lang::get('Delete category by Admin:'), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
             return back();
         endif;
     }

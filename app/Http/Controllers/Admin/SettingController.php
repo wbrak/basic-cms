@@ -65,7 +65,7 @@ class SettingController extends Controller
         fclose($file);
 
         Alert::success(Lang::get('Updated Settings'), Lang::get('Settings were updated successfully'));
-        Log::info(Lang::get('Updated settings by Admin:'), ['admin' => Auth::id()]);
+        Log::info(Lang::get('Updated settings by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
         return redirect('admin');
     }
 
@@ -91,7 +91,7 @@ class SettingController extends Controller
             $img->save($upload_path.'/'.$path.'/'.$filename);
         endif;
         Alert::success(Lang::get('Updated Settings'), Lang::get('Logo were updated successfully'));
-        Log::info(Lang::get('Updated logo by Admin:'), ['admin' => Auth::id()]);
+        Log::info(Lang::get('Updated logo by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
         return redirect('admin');
     }
 
@@ -112,7 +112,7 @@ class SettingController extends Controller
             $fl = $request->faviconAdmin->storeAs($path, $filename, 'public');
         endif;
         Alert::success(Lang::get('Updated Settings'), Lang::get('Favicon were updated successfully'));
-        Log::info(Lang::get('Updated favicon by Admin:'), ['admin' => Auth::id()]);
+        Log::info(Lang::get('Updated favicon by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
         return redirect('admin');
     }
 
@@ -133,7 +133,7 @@ class SettingController extends Controller
             $fl = $request->favicon->storeAs($path, $filename, 'public');
         endif;
         Alert::success(Lang::get('Updated Settings'), Lang::get('Favicon were updated successfully'));
-        Log::info(Lang::get('Updated favicon by Admin:'), ['admin' => Auth::id()]);
+        Log::info(Lang::get('Updated favicon by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
         return redirect('admin');
     }
 
@@ -143,10 +143,9 @@ class SettingController extends Controller
      */
     public function swap($lang)
     {
-        // Almacenar el lenguaje en la session
         session()->put('locale', $lang);
         Alert::success(Lang::get('Updated Settings'), Lang::get('Language were updated successfully'));
-        Log::info(Lang::get('Updated language by Admin:'), ['admin' => Auth::id()]);
+        Log::info(Lang::get('Updated language by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
         return redirect()->back();
     }
 }

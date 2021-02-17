@@ -92,7 +92,7 @@ class UserController extends Controller
         if($user->save()):
             if($request->input('role') >= "2"):
             Alert::success(Lang::get('Updated User'), Lang::get('The user role was updated successfully to Employee'));
-            Log::info(Lang::get('Modified employee by'), ['admin' => Auth::user()->getAuthIdentifier()]);
+            Log::info(Lang::get('Modified employee by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
             return redirect('/admin/user/'.$user->id.'/permissions');
             else:
                 Alert::success(Lang::get('Updated User'), Lang::get('The user role was updated successfully'));
@@ -111,11 +111,11 @@ class UserController extends Controller
     	if($user->status == "100"):
     		$user->status = "1";
     		Alert::success(Lang::get('Updated User'), Lang::get('User reactivated successfully'));
-            Log::info(Lang::get('User reactivated by'), ['admin' => Auth::user()->getAuthIdentifier()]);
+            Log::info(Lang::get('User reactivated by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
     	else:
     		$user->status = "100";
     		Alert::warning(Lang::get('Updated User'), Lang::get('User suspended successfully'));
-            Log::info(Lang::get('User suspended by'), ['admin' => Auth::user()->getAuthIdentifier()]);
+            Log::info(Lang::get('User suspended by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
     	endif;
 
     	if($user->save()):
@@ -145,7 +145,7 @@ class UserController extends Controller
         $user->permissions = $request->except(['_token']);
         if($user->save()):
             Alert::success(Lang::get('Updated User'), Lang::get('User permissions were successfully updated'));
-            Log::info(Lang::get('User permissions were updated by'), ['admin' => Auth::id()]);
+            Log::info(Lang::get('User permissions were updated by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
             return back();
         endif;
     }
@@ -202,7 +202,7 @@ class UserController extends Controller
                     unlink($upload_path.'/'.$path.'/'.$act_avatar);
                     unlink($upload_path.'/'.$path.'/av_'.$act_avatar);
                     Alert::success(Lang::get('Avatar Uploaded'), Lang::get('The selected avatar was uploaded successfully'));
-                    Log::info(Lang::get('Uploaded avatar Admin:'), ['admin' => Auth::id()]);
+                    Log::info(Lang::get('Uploaded avatar Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
                     return back();
                 endif;
 
@@ -234,7 +234,7 @@ class UserController extends Controller
             $user->lastname = e($request->input('lastname'));
             if ($user->save()):
                 Alert::success(Lang::get('Profile Updated'), Lang::get('The profile data was successfully updated'));
-                Log::info(Lang::get('Updated profile data Admin:'), ['admin' => Auth::id()]);
+                Log::info(Lang::get('Updated profile data Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
                 return back();
             endif;
         endif;
@@ -260,7 +260,7 @@ class UserController extends Controller
                 $user->password = Hash::make($request->input('npassword'));
                 if ($user->save()):
                     Alert::success(Lang::get('Change of Password'), Lang::get('The password was updated successfully'));
-                    Log::info(Lang::get('Updated password Admin:'), ['admin' => Auth::id()]);
+                    Log::info(Lang::get('Updated password Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
                     return back();
                 endif;
             else:
@@ -278,7 +278,7 @@ class UserController extends Controller
         $user = User::findOrfail($id);
         if($user->delete()):
             Alert::success(Lang::get('User Deleted'), Lang::get('The selected user was removed successfully'));
-            Log::notice(Lang::get('User deleted by Admin:'), ['admin' => Auth::id()]);
+            Log::notice(Lang::get('User deleted by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
             return back();
         endif;
     }

@@ -29,6 +29,15 @@ Route::prefix('/admin')->group(function(){
     Route::post('/post/add', [PostController::class, 'postPostAdd'])->name('PostAdd');
     Route::delete('/post/{id}/delete', [PostController::class, 'deletePost'])->name('PostDelete');
 
+    // Module Pages
+    Route::get('/pages', [PageController::class, 'getAllPages'])->name('Pages');
+    Route::get('/page/{id}/detail', [PageController::class, 'getPageDetail'])->name('PageDetail');
+    Route::get('/page/{id}/edit', [PageController::class, 'getPageEdit'])->name('PageEdit');
+    Route::post('/page/{id}/edit', [PageController::class, 'postPageEdit'])->name('PageEdit');
+    Route::get('/page/add', [PageController::class, 'getPageAdd'])->name('PageAdd');
+    Route::post('/page/add', [PageController::class, 'postPageAdd'])->name('PageAdd');
+    Route::delete('/page/{id}/delete', [PageController::class, 'deletePage'])->name('PageDelete');
+
 	// Module Comments
     Route::get('/comments', [CommentController::class, 'getAllComments'])->name('Comments');
     Route::get('/comment/{id}/detail', [CommentController::class, 'getCommentDetail'])->name('CommentDetail');
@@ -46,15 +55,6 @@ Route::prefix('/admin')->group(function(){
     Route::post('/product/{id}/gallery/add', [ProductController::class, 'postProductGalleryAdd'])->name('ProductGalleryAdd');
     Route::get('/product/{id}/gallery/{gid}/delete', [ProductController::class, 'getProductGalleryDelete'])->name('ProductGalleryAdd');
     Route::delete('/product/{id}/delete', [ProductController::class, 'deleteProduct'])->name('ProductDelete');
-
-	// Module Pages
-    Route::get('/pages', [PageController::class, 'getAllPages'])->name('Pages');
-    Route::get('/page/{id}/detail', [PageController::class, 'getPageDetail'])->name('PageDetail');
-    Route::get('/page/{id}/edit', [PageController::class, 'getPageEdit'])->name('PageEdit');
-    Route::post('/page/{id}/edit', [PageController::class, 'postPageEdit'])->name('PageEdit');
-    Route::get('/page/add', [PageController::class, 'getPageAdd'])->name('PageAdd');
-    Route::post('/page/add', [PageController::class, 'postPageAdd'])->name('PageAdd');
-    Route::delete('/page/{id}/delete', [PageController::class, 'deletePage'])->name('PageDelete');
 
 	// Module Users
     Route::get('/users/{status}', [UserController::class, 'getAllUsers'])->name('Users');

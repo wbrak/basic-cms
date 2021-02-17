@@ -89,7 +89,7 @@ class CommentController extends Controller
     		$comment->comment = e($request->input('comment'));
             if($comment->save()):
                 Alert::success(Lang::get('Comment Updated'), Lang::get('The comment has been updated successfully'));
-                Log::info(Lang::get('Updated comment by Admin:'), ['admin' => Auth::id()]);
+                Log::info(Lang::get('Updated comment by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
     			return back();
     		endif;
     	endif;
@@ -103,7 +103,7 @@ class CommentController extends Controller
         $comment = Comment::findOrfail($id);
         if($comment->delete()):
             Alert::success(Lang::get('Comment Deleted'), Lang::get('The comment has been deleted successfully'));
-            Log::info(Lang::get('Delete comment by Admin:'), ['admin' => Auth::id()]);
+            Log::info(Lang::get('Delete comment by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
             return back();
         endif;
     }

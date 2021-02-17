@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use App\Models\User;
 use App\Models\Post;
 use App\Models\Page;
@@ -45,6 +46,9 @@ class DashboardController extends Controller
         $comments = Comment::all()->count();
         $commentsPublished = Comment::where('status', '1')->count();
         $commentsApproved = Comment::where('status', '0')->count();
+        $products = Product::all()->count();
+        $productsPublished = Product::where('status', '1')->count();
+        $productsDraft = Product::where('status', '0')->count();
 
         $users = array($users);
         $usersVerified = array($usersVerified);
@@ -59,11 +63,15 @@ class DashboardController extends Controller
         $comments = array($comments);
         $commentsPublished = array($commentsPublished);
         $commentsApproved = array($commentsApproved);
+        $products = array($products);
+        $productsPublished = array($productsPublished);
+        $productsDraft = array($productsDraft);
         return view('admin.dashboard',['users' => $users, 'usersVerified' => $usersVerified, 'usersNoVerified' => $usersNoVerified,
                                             'usersBanned' => $usersBanned, 'posts' => $posts, 'postsPublished' => $postsPublished,
                                             'postsDraft' => $postsDraft, 'pages' => $pages, 'pagesPublished' => $pagesPublished,
                                             'pagesDraft' => $pagesDraft, 'comments' => $comments, 'commentsPublished' => $commentsPublished,
-                                            'commentsApproved' => $commentsApproved]);
+                                            'commentsApproved' => $commentsApproved, 'products' => $products, 'productsPublished' => $productsPublished,
+                                            'productsDraft' => $productsDraft]);
     }
 
 }

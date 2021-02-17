@@ -66,23 +66,23 @@ class ConnectController extends Controller
         else:
             if(Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')], true)):
                 if(Auth::user()->status == "100"):
-                    Log::info(Lang::get('Banned user tried to access'), ['email' => $request->input('email')]);
+                    Log::info(Lang::get('Banned user tried to access'), ['User Email' => $request->input('email')]);
                     return redirect('/logout');
                 elseif(Auth::user()->role > "1"):
-                    Log::info(Lang::get('An administrator logged in'), ['email' => $request->input('email')]);
+                    Log::info(Lang::get('An administrator logged in'), ['Admin Email' => $request->input('email')]);
                     event(new UserLogin(Auth::user()));
                     return redirect('/admin');
                 elseif(Auth::user()->status == "0"):
-                    Log::info(Lang::get('Unverified user tried to access'), ['email' => $request->input('email')]);
+                    Log::info(Lang::get('Unverified user tried to access'), ['User Email' => $request->input('email')]);
                     event(new UserLogin(Auth::user()));
                     return redirect('/logout');
                 else:
-                    Log::info(Lang::get('Verified user successfully logged in'), ['email' => $request->input('email')]);
+                    Log::info(Lang::get('Verified user successfully logged in'), ['User Email' => $request->input('email')]);
                     event(new UserLogin(Auth::user()));
                     return redirect('/');
                 endif;
             else:
-                Log::error(Lang::get('User could not access'), ['email' => $request->input('email')]);
+                Log::error(Lang::get('User could not access'), ['User Email' => $request->input('email')]);
                 return back()->with('message', Lang::get('Wrong email or password'))->with('typealert', 'danger');
             endif;
         endif;
@@ -134,7 +134,7 @@ class ConnectController extends Controller
 
             if($user->save()):
                 event(new NewUserRegistered($user));
-                Log::notice(Lang::get('New user successfully registered '.$request->input('email')), ['name'  => $request->input('name')]);
+                Log::notice(Lang::get('New user successfully registered '.$request->input('User Email')), ['name'  => $request->input('name')]);
                 return redirect('/login')->with('message', Lang::get('User created successfully, we have sent a link to confirm the email'))
                                              ->with('typealert', 'success');
             endif;
@@ -158,7 +158,7 @@ class ConnectController extends Controller
         $user->confirmed = true;
         $user->confirmation_code = null;
         $user->save();
-        Log::info(Lang::get('User verified his email'), ['email' => $user->email]);
+        Log::info(Lang::get('User verified his email'), ['User Email' => $user->email]);
         return redirect('/login')->with('message', Lang::get('You have successfully confirmed your email, now you can log in!'))
                                      ->with('typealert', 'success');
     }

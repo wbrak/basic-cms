@@ -126,7 +126,7 @@ class PageController extends Controller
                     unlink($upload_path.'/'.$ipp.'/t_'.$ip);
                 endif;
                 Alert::success(Lang::get('Page Updated'), Lang::get('The page has updated successfully'));
-                Log::info(Lang::get('Updated page by Admin:'), ['admin' => Auth::id()]);
+                Log::info(Lang::get('Updated page by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
     			return back();
     		endif;
     	endif;
@@ -196,7 +196,7 @@ class PageController extends Controller
                     $img->save($upload_path.'/'.$path.'/t_'.$filename);
                 endif;
                 Alert::success(Lang::get('Page Created'), Lang::get('The page has created successfully'));
-                Log::info(Lang::get('Created page by Admin:'), ['admin' => Auth::id()]);
+                Log::info(Lang::get('Created page by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
                 return redirect('admin/pages');
             endif;
         endif;
@@ -211,7 +211,7 @@ class PageController extends Controller
         $page = Page::findOrfail($id);
         if($page->delete()):
             Alert::success(Lang::get('Page Deleted'), Lang::get('The page has deleted successfully'));
-            Log::info(Lang::get('Delete page by Admin:'), ['admin' => Auth::id()]);
+            Log::info(Lang::get('Delete page by Admin: '), ['Admin Id' => Auth::user()->getAuthIdentifier()]);
             return back();
         endif;
     }
