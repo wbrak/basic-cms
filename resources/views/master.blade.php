@@ -57,13 +57,13 @@
                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-power-off"></i></a>
 
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="{{ url('/login') }}">Acceso</a>
-                                <a class="dropdown-item" href="{{ url('/register') }}">Registro</a>
                                 @if (Route::has('login'))
                                 @auth
-                                <hr>
+                                <a class="dropdown-item" href="{{ url('/admin') }}"><i class="fas fa-home" aria-hidden="true"></i> Admin</a>
                                 <a class="dropdown-item" href="{{ url('/logout') }}"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Salir</a>
                                 @else
+                                <a class="dropdown-item" href="{{ url('/login') }}">Acceso</a>
+                                <a class="dropdown-item" href="{{ url('/register') }}">Registro</a>
                                 @endauth
                                 @endif
                             </div>
